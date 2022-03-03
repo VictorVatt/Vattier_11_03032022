@@ -1,15 +1,16 @@
 import logo from "../../assets/logo_kasa.png"
-import { Link } from "react-router-dom"
+
+import { HeaderWrapper, StyledLink, Logo} from './HeaderStyle'
 
 function Header() {
     return (
-        <div>
-            <img src={logo} alt="Logo kasa" />
+        <HeaderWrapper>
+            <Logo src={logo} alt="Logo kasa" />
             <nav>
-                <Link to='/'>Acceuil</Link>
-                <Link to='/about'>A propos</Link>
+                <StyledLink to='/'>Acceuil</StyledLink>
+                <StyledLink to='/about'>A propos</StyledLink>
             </nav>
-        </div>
+        </HeaderWrapper>
     )
 }
 

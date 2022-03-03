@@ -1,9 +1,11 @@
-
+import {BodyHead, HomeWrapper, HeadContent} from './HomeStyle'
 function App() {
   return (
-    <div className="App">
-      Pipi caca
-    </div>
+    <HomeWrapper>
+      <BodyHead>
+        <HeadContent>Chez vous, partout et ailleurs</HeadContent>
+      </BodyHead>
+    </HomeWrapper>
   );
 }
 
