@@ -16,7 +16,7 @@ function Home() {
 
       }
       finally {
-        console.log("Datas loaded")
+        console.log("Home datas loaded")
       }
     }
     fetchHomeData()
