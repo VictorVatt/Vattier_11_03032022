@@ -10,6 +10,8 @@ export const HeaderWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1280px;
+    margin:auto;
     padding: 20px;
 `
 export const StyledLink = styled(Link)`

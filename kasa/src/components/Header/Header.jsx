@@ -5,7 +5,7 @@ import { HeaderWrapper, StyledLink, Logo} from './HeaderStyle'
 function Header() {
     return (
         <HeaderWrapper>
-            <Logo src={logo} alt="Logo kasa" />
+            <StyledLink to='/'><Logo src={logo} alt="Logo kasa" /></StyledLink>
             <nav>
                 <StyledLink to='/'>Acceuil</StyledLink>
                 <StyledLink to='/about'>A propos</StyledLink>
