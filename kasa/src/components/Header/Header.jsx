@@ -7,7 +7,7 @@ function Header() {
         <HeaderWrapper>
             <StyledLink to='/'><Logo src={logo} alt="Logo kasa" /></StyledLink>
             <nav>
-                <StyledLink to='/'>Acceuil</StyledLink>
+                <StyledLink to='/'>Accueil</StyledLink>
                 <StyledLink to='/about'>A propos</StyledLink>
             </nav>
         </HeaderWrapper>

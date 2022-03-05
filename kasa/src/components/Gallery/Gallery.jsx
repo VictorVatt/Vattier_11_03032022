@@ -1,4 +1,4 @@
-import { HomePicture, GalleryContainer, ChevronLeftStyle, ChevronRightStyle } from "./GalleryStyle"
+import { HomePicture, GalleryContainer, ChevronLeftStyle, ChevronRightStyle, GalleryComponentWrapper,ImageCounter } from "./GalleryStyle"
 import chevronLeft from '../../assets/chevron-left-solid.svg'
 import chevronRight from '../../assets/chevron-right-solid.svg'
 import { useState } from 'react'
@@ -12,14 +12,14 @@ function Gallery({ pictures }) {
         setIndex(pictures.length - 1)
     }
     return (
-    <div>
+    <GalleryComponentWrapper>
         <GalleryContainer >
                 <HomePicture src={pictures[index]} alt="lodging-tour" />
                 <ChevronLeftStyle src={chevronLeft} alt="précedent" onClick={() => setIndex(index - 1)}/>
                 <ChevronRightStyle src={chevronRight} alt="suivant" onClick={() => setIndex(index + 1)}/>
         </GalleryContainer>
-        <p>{index + 1}/{pictures.length}</p>
-    </div>
+        <ImageCounter>{index + 1}/{pictures.length}</ImageCounter>
+    </GalleryComponentWrapper>
     )
 }
 export default Gallery

@@ -25,9 +25,7 @@ function Housing() {
     return(
         <div>
             {homeData.map((element) => (
-                <div key={element.id}>
-                  <Gallery  pictures={element.pictures} id={element.id} alt="photos maison" />
-                </div>
+                  <Gallery key={element.id}  pictures={element.pictures} id={element.id} alt="photos maison" />
             ))}
         </div>
     )
