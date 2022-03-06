@@ -1,15 +1,21 @@
 
+import { DropdownTitle, DropdownContainer, DropdownContent, ChevronUpIcon } from './DropdownStyle'
+import { useState } from 'react'
+
+import chevronUp from '../../assets/chevron-up-solid.svg'
 
 function Dropdown({ description }) {
+    const [isDeployed, setDeployed] = useState(true)
     return(
-        <div>
-            <div>
+        <DropdownContainer>
+            <DropdownTitle  onClick={() => isDeployed === true ? setDeployed(false) : setDeployed(true)} >
                 Description
-            </div>
-            <div>
-                {description}
-            </div>
-        </div>
+                <ChevronUpIcon $isDeployed={isDeployed} src={chevronUp} alt='dropdown-icon'/>
+            </DropdownTitle>
+            <DropdownContent $isDeployed={isDeployed}>
+                <p>{description}</p>
+            </DropdownContent>
+        </DropdownContainer>
     )
 }
 
