@@ -2,7 +2,7 @@ import colors from "../../utils/Styles/colors";
 import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
-    max-width: 582px;
+    max-width: 1023px;
     margin: 1rem auto 0 auto;
     padding:  0 20px 30px 20px;
     overflow: hidden;
