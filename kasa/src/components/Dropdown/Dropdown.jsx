@@ -4,19 +4,35 @@ import { useState } from 'react'
 
 import chevronUp from '../../assets/chevron-up-solid.svg'
 
-function Dropdown({ description }) {
+function Dropdown({ content, title, type }) {
     const [isDeployed, setDeployed] = useState(true)
-    return(
+
+    if (type === 'description') {
+        return(
+            <DropdownContainer>
+                <DropdownTitle  onClick={() => isDeployed === true ? setDeployed(false) : setDeployed(true)} >
+                    {title}
+                    <ChevronUpIcon $isDeployed={isDeployed} src={chevronUp} alt='dropdown-icon'/>
+                </DropdownTitle>
+                <DropdownContent $isDeployed={isDeployed}>
+                    <p>{content}</p>
+                </DropdownContent>
+            </DropdownContainer>
+        )
+    } else {
+        return(
         <DropdownContainer>
-            <DropdownTitle  onClick={() => isDeployed === true ? setDeployed(false) : setDeployed(true)} >
-                Description
-                <ChevronUpIcon $isDeployed={isDeployed} src={chevronUp} alt='dropdown-icon'/>
-            </DropdownTitle>
-            <DropdownContent $isDeployed={isDeployed}>
-                <p>{description}</p>
-            </DropdownContent>
-        </DropdownContainer>
-    )
+                <DropdownTitle  onClick={() => isDeployed === true ? setDeployed(false) : setDeployed(true)} >
+                    {title}
+                    <ChevronUpIcon $isDeployed={isDeployed} src={chevronUp} alt='dropdown-icon'/>
+                </DropdownTitle>
+                <DropdownContent $isDeployed={isDeployed}>
+                    {content.map((element) => 
+                        (<p>{element}</p>))}
+                </DropdownContent>
+            </DropdownContainer>
+        )
+    }
 }
 
 export default Dropdown

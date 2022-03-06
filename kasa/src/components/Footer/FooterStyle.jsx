@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.div`
     background-color: black;
     display: flex;
-    justify-content: center;
-    margin-top: 40px;`
+    justify-content: center;`
 
 export const FooterWrapper = styled.div`
     display: flex;

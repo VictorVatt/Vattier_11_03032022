@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import styled from "styled-components"
 import { useParams } from "react-router-dom"
 import Gallery from "../../components/Gallery/Gallery"
 import HouseInformations from "../../components/HouseInformations/HouseInformations"
@@ -30,11 +31,15 @@ function Housing() {
               <div key={house.id}>
                   <Gallery pictures={house.pictures} id={house.id} alt="photos maison" />
                   <HouseInformations  title={house.title} host={house.host} location={house.location} tags={house.tags} rating={house.rating}/>
-                  <Dropdown description={house.description}/>
+                  <DropdownContainer>
+                    <Dropdown content={house.description} title="Description" type="description"/>
+                    <Dropdown content={house.equipments} title="Equipements" type="equipments"/>
+                  </DropdownContainer>
               </div>
             ))}
         </div>
     )
 }
-
+const DropdownContainer = styled.div`
+  margin-bottom: 2rem;`
 export default Housing
