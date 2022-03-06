@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import Gallery from "../../components/Gallery/Gallery"
+import HouseInformations from "../../components/HouseInformations/HouseInformations"
+import Dropdown from "../../components/Dropdown/Dropdown"
 
 function Housing() {
     const { id } = useParams()
@@ -24,8 +26,12 @@ function Housing() {
     }, [])
     return(
         <div>
-            {homeData.map((element) => (
-                  <Gallery key={element.id}  pictures={element.pictures} id={element.id} alt="photos maison" />
+            {homeData.map((house) => (
+              <div key={house.id}>
+                  <Gallery pictures={house.pictures} id={house.id} alt="photos maison" />
+                  <HouseInformations  title={house.title} host={house.host} location={house.location} tags={house.tags} rating={house.rating}/>
+                  <Dropdown description={house.description}/>
+              </div>
             ))}
         </div>
     )
