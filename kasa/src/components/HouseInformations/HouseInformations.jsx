@@ -1,6 +1,6 @@
-import { RateStarIcon, InformationsContainer, InformationTitle, InformationLocation, InformationTag, TagContainer, HostRateContainer, HostContainer, HostPicture, HostName } from './HouseInformationsStyle' 
-import rateLogo from '../../assets/rateLogo.png'
-import rateLogoGrey from '../../assets/rateLogoGrey.png'
+import { RateStarIcon, RateStarIconGrey, InformationsContainer, InformationTitle, InformationLocation, InformationTag, TagContainer, HostRateContainer, HostContainer, HostPicture, HostName, RateContainer } from './HouseInformationsStyle' 
+import rateLogo from '../../assets/rateLogo.svg'
+import rateLogoGrey from '../../assets/rateLogoGrey.svg'
 
 function RedStarRender(rate) {
     let array = []
@@ -38,14 +38,14 @@ function HouseInformations({ title, host, location, tags, rating }) {
                     <HostName>{host.name}</HostName>
                     <HostPicture src={host.picture} alt={`${host.name} profile`} />
                 </HostContainer>
-                <div>
+                <RateContainer>
                     {RedStarRender(rating).map((element, index) => (
                         <RateStarIcon key={index} src={rateLogo} alt='rate-icon'/>
                     ))}
                     {GreyStarRender(rating).map((element, index) => (
-                        <RateStarIcon key={index} src={rateLogoGrey} alt='rate-icon'/>
+                        <RateStarIconGrey key={index} src={rateLogoGrey} alt='rate-icon'/>
                     ))}
-                </div>
+                </RateContainer>
             </HostRateContainer>
         </InformationsContainer>
     )

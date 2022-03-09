@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from "react-router-dom"
 import About from './pages/About/About';
+import Error from './components/Error/Error'
 
 
 ReactDOM.render(
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route exact path='/' element={<Home />}/>
       <Route path='/about' element={<About />}/>
       <Route path='/housing/:id' element={<Housing />} />
+      <Route path='*' element={<Error />} />
     </Routes>
     <Footer />
   </BrowserRouter>,

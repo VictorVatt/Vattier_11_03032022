@@ -32,8 +32,8 @@ function Housing() {
                   <Gallery pictures={house.pictures} id={house.id} alt="photos maison" />
                   <HouseInformations  title={house.title} host={house.host} location={house.location} tags={house.tags} rating={house.rating}/>
                   <DropdownContainer>
-                    <Dropdown content={house.description} title="Description" type="description"/>
-                    <Dropdown content={house.equipments} title="Equipements" type="equipments"/>
+                    <Dropdown content={house.description} title="Description" type="description" size={"small"}/>
+                    <Dropdown content={house.equipments} title="Equipements" type="equipments" size={"small"}/>
                   </DropdownContainer>
               </div>
             ))}
@@ -41,5 +41,12 @@ function Housing() {
     )
 }
 const DropdownContainer = styled.div`
-  margin-bottom: 2rem;`
+  margin-bottom: 2rem;
+  @media (min-width: 1024px) {
+    display:flex;
+    padding: 0 20px;  
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 1rem auto 2rem auto;
+}`
 export default Housing

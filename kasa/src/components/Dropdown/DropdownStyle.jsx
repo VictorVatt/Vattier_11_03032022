@@ -6,6 +6,9 @@ export const DropdownContainer = styled.div`
     margin: 1rem auto 0 auto;
     padding:  0 20px 30px 20px;
     overflow: hidden;
+    @media (min-width: 1024px) {
+        ${(props) => props.size === "small" && `width: 582px; margin: 0; `}
+        padding : 0 10px 53px 10px;
     `
 export const DropdownTitle = styled.div`
     background-color: ${colors.primary};
@@ -22,6 +25,10 @@ export const DropdownTitle = styled.div`
     cursor: pointer;
     &:hover {
         background-color: #E35757;
+    }
+    @media (min-width: 1024px) {
+        height: 52px; 
+        border-radius: 10px;
     }`
 export const ChevronUpIcon = styled.img`
     transition-duration: 0.7s;
@@ -41,6 +48,10 @@ export const ChevronUpIcon = styled.img`
         `margin-top:0;`}
     p{
         margin: 0 20px;
+    }
+    @media (min-width: 1024px) {
+        font-size: 18px; 
+        border-radius: 10px;
     }
 `
 

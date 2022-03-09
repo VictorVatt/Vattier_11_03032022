@@ -14,6 +14,12 @@ export const BodyHead = styled.div`
     border-radius: 10px;
     width: 100%;
     height: 111px;
+    @media (min-width: 1024px) {
+        height: 223px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     `
 export const HeadContent = styled.p`
     position: relative;
@@ -23,7 +29,13 @@ export const HeadContent = styled.p`
     color: ${colors.primary};
     font-size: 24px;
     line-heigth: 24px;
-    font-weight: 500;`
+    font-weight: 500;
+    @media (min-width: 1024px) {
+        top: 0;
+        padding: 0;
+        font-size: 48px;
+        color: white;
+    }`
 
 export const CardPartWrapper = styled.div`
     margin-top: 22px;

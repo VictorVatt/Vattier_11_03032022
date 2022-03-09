@@ -4,12 +4,12 @@ import { useState } from 'react'
 
 import chevronUp from '../../assets/chevron-up-solid.svg'
 
-function Dropdown({ content, title, type }) {
+function Dropdown({ content, title, type, size }) {
     const [isDeployed, setDeployed] = useState(true)
 
     if (type === 'description') {
         return(
-            <DropdownContainer>
+            <DropdownContainer size={size}>
                 <DropdownTitle  onClick={() => isDeployed === true ? setDeployed(false) : setDeployed(true)} >
                     {title}
                     <ChevronUpIcon $isDeployed={isDeployed} src={chevronUp} alt='dropdown-icon'/>
@@ -21,7 +21,7 @@ function Dropdown({ content, title, type }) {
         )
     } else {
         return(
-        <DropdownContainer>
+        <DropdownContainer size={size}>
                 <DropdownTitle  onClick={() => isDeployed === true ? setDeployed(false) : setDeployed(true)} >
                     {title}
                     <ChevronUpIcon $isDeployed={isDeployed} src={chevronUp} alt='dropdown-icon'/>

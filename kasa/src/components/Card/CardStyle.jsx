@@ -22,7 +22,7 @@ export const CardTitle = styled.p`
     left: 16px;
     width: 200px;
     margin:0;
-    color: ${colors.primary};
+    color: white;
     font-size: 18px;
     font-weight: 500;
     

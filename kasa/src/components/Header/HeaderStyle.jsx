@@ -4,7 +4,11 @@ import colors from '../../utils/Styles/colors'
 
 export const Logo = styled.img`
     width: 145px;
-    height: 47px;`
+    height: 47px;
+    @media (min-width: 1024px) {
+        width: 210px;
+        height: 70px;
+    }`
 
 export const HeaderWrapper = styled.div`
     display: flex;
@@ -20,5 +24,9 @@ export const StyledLink = styled(Link)`
     margin: 10px;
     font-size: 13px;
     font-weight: 500;
+    @media (min-width: 1024px) {
+        font-size: 24px;
+        margin: 30px;
+    }
 
 `

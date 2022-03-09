@@ -1,4 +1,4 @@
-import logo from "../../assets/logo_kasa.png"
+import logo from "../../assets/logo-kasa.svg"
 
 import { HeaderWrapper, StyledLink, Logo} from './HeaderStyle'
 
