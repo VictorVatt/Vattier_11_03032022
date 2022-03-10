@@ -8,13 +8,19 @@ export const Error404 = styled.h1`
     font-size: 96px;
     margin: 2rem 0 0 0;
     line-height: 142.6%;
-    text-align: center;`
+    text-align: center;
+    @media (min-width: 1024px) {
+        font-size: 288px;
+    }`
 
 export const Content = styled.p`
     text-align:center;
     color: ${colors.primary};
     margin-bottom: 12rem;
     padding: 0 45px;
+    @media (min-width: 1024px) {
+        font-size: 36px;
+    }
     `
 export const LinkContainer = styled.div`
     display:flex;
@@ -22,4 +28,7 @@ export const LinkContainer = styled.div`
     margin:  0 auto 10.9rem 0;
 `
 export const StyledLink = styled(Link)`
-    color: ${colors.primary};`
+    color: ${colors.primary};
+    @media (min-width: 1024px) {
+        font-size: 18px;
+    }`

@@ -20,13 +20,23 @@ export const HeaderWrapper = styled.div`
 `
 export const StyledLink = styled(Link)`
     color: ${colors.primary};
-    text-decoration: none;
     margin: 10px;
+    text-decoration: none;
     font-size: 13px;
     font-weight: 500;
     @media (min-width: 1024px) {
         font-size: 24px;
         margin: 30px;
     }
-
 `
+export const StyledLinkSelected = styled(Link)`
+    color: ${colors.primary};
+    margin: 10px;
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: 500;
+    @media (min-width: 1024px) {
+        font-size: 24px;
+        margin: 30px;
+    }
+    `
