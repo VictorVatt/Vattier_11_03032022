@@ -9,16 +9,17 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from "react-router-dom"
 import About from './pages/About/About';
 import Error from './components/Error/Error'
+import { routes } from './routes'
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Header />
     <Routes>
-      <Route exact path='/' element={<Home />}/>
-      <Route path='/about' element={<About />}/>
-      <Route path='/housing/:id' element={<Housing />} />
-      <Route path='*' element={<Error />} />
+      <Route exact path={routes.mainPath} element={<Home />}/>
+      <Route path={routes.aboutPath} element={<About />}/>
+      <Route path={routes.housingPath} element={<Housing />} />
+      <Route path={routes.errorPath} element={<Error />} />
     </Routes>
     <Footer />
   </BrowserRouter>,
