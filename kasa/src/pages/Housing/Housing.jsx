@@ -40,6 +40,8 @@ function Housing() {
         </div>
     )
 }
+export default Housing
+
 const DropdownContainer = styled.div`
   margin-bottom: 2rem;
   @media (min-width: 1024px) {
@@ -49,4 +51,3 @@ const DropdownContainer = styled.div`
     max-width: 1240px;
     margin: 1rem auto 2rem auto;
 }`
-export default Housing
